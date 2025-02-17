@@ -13,7 +13,7 @@
 </h6>
 
 <p align=center>
-	A script that can determine whether a website is vulnerable to xmlrpc DOS.
+	A script that can determine whether a website is vulnerable to Pink Ddos.
 </p>
 
 <p align=center>
@@ -28,7 +28,7 @@
 &nbsp;
 
 ### Usage
-> <code>./xmlrpc-dos.sh \<url\></code>
+> <code> HTTP & TCP\<url\></code>
 <table>
     <tr>
         <th>Value</th>
@@ -36,7 +36,7 @@
     </tr>
     <tr>
         <td>url</td>
-        <td>Target url (e.g. 'https://dummy.com' or 'http://dummy.com')</td>
+        <td>Target url (e.g. '123.121.1223' or 'example.com')</td>
     </tr>
 </table>
 
