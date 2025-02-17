@@ -17,7 +17,7 @@
 </p>
 
 <p align=center>
-    <a href="https://github.com/wannabewastaken/admin-finder/">
+    <a href="">
 		<img alt="Version" src="">
     </a>
     <a href="">
@@ -32,7 +32,6 @@
 > <code> example: python3 Pink-Ddos.py -target example.com -port 80 -method http -threads 20 -useragents random-user.txt </code>
 
 ### How to install
-> This script required dependencies of `curl >= 7.88.1` or higher.
 <details>
 <summary>Termux</summary>
 	
@@ -56,6 +55,10 @@
 <span>Let's cloning it into your computer.</span>
 ```bash
 > git clone https://github.com/anonwincy/Pink-Ddos.git
+```
+```bash
+cd Pink-Ddos
+python3 Pink-Ddos.py -h
 ```
 </details>
 
