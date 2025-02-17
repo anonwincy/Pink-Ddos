@@ -18,10 +18,10 @@
 
 <p align=center>
     <a href="">
-		<img alt="Version" src="">
+		<img alt="Version" src="https://img.shields.io/github/v/tag/wannabewastaken/xmlrpc-dos?style=for-the-badge&label=release&logo=verdaccio&color=526D82&logoColor=DDE6ED&labelColor=27374D&sort=semver">
     </a>
     <a href="">
-		<img alt="Stargazers" src="">
+		<img alt="Stargazers" src="https://img.shields.io/github/stars/wannabewastaken/xmlrpc-dos?style=for-the-badge&logo=starship&color=526D82&logoColor=DDE6ED&labelColor=27374D">
     </a>
 </p>
 
