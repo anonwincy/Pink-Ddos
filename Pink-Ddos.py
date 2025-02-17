@@ -101,14 +101,14 @@ def perform_tcp_flood(target, port, threads, timeout):
 
 def main():
     parser = argparse.ArgumentParser(description="Advanced Website Load Testing Tool")
-    parser.add_argument("-t", "--target", help="Target IP address or domain", required=True)
-    parser.add_argument("-p", "--port", help="Target port", required=True, type=int)
-    parser.add_argument("-m", "--mode", help="Attack mode (http or tcp)", required=True, choices=["http", "tcp"])
-    parser.add_argument("-T", "--threads", help="Number of threads", type=int, default=10)
-    parser.add_argument("-P", "--proxy", help="Path to proxy file")
-    parser.add_argument("-U", "--user-agents", help="Path to user agents file", default="user-agents.txt")
-    parser.add_argument("-R", "--retry", help="Number of retries", type=int, default=3)
-    parser.add_argument("-to", "--timeout", help="Request timeout in seconds", type=int, default=5)
+    parser.add_argument("-url", "--target", help="Target IP address or domain", required=True)
+    parser.add_argument("-port", "--port", help="Target port", required=True, type=int)
+    parser.add_argument("-method", "--mode", help="Attack mode (http or tcp)", required=True, choices=["http", "tcp"])
+    parser.add_argument("-threads", "--threads", help="Number of threads", type=int, default=10)
+    parser.add_argument("-proxy", "--proxy", help="Path to proxy file")
+    parser.add_argument("-useragents", "--user-agents", help="Path to user agents file", default="user-agents.txt")
+    parser.add_argument("-retry", "--retry", help="Number of retries", type=int, default=3)
+    parser.add_argument("-time", "--timeout", help="Request timeout in seconds", type=int, default=5)
     args = parser.parse_args()
 
     target = args.target
