@@ -3,13 +3,13 @@
 </h3>
 
 <h6 align=center>
-    <a href="https://github.com/wannabewastaken/xmlrpc-dos#usage">Usage</a>
+    <a href="">Usage</a>
     ·
-    <a href="https://github.com/wannabewastaken/xmlrpc-dos#how-to-install">Install</a>
+    <a href="">Install</a>
     ·
-    <a href="https://github.com/wannabewastaken/xmlrpc-dos#disclaimer">Disclaimer</a>
+    <a href="">Disclaimer</a>
     ·
-    <a href="https://github.com/wannabewastaken/xmlrpc-dos#References">References</a>
+    <a href="">References</a>
 </h6>
 
 <p align=center>
@@ -18,10 +18,10 @@
 
 <p align=center>
     <a href="https://github.com/wannabewastaken/admin-finder/">
-		<img alt="Version" src="https://img.shields.io/github/v/tag/wannabewastaken/xmlrpc-dos?style=for-the-badge&label=release&logo=verdaccio&color=526D82&logoColor=DDE6ED&labelColor=27374D&sort=semver">
+		<img alt="Version" src="">
     </a>
-    <a href="https://github.com/wannabewastaken/admin-finder/stargazers">
-		<img alt="Stargazers" src="https://img.shields.io/github/stars/wannabewastaken/xmlrpc-dos?style=for-the-badge&logo=starship&color=526D82&logoColor=DDE6ED&labelColor=27374D">
+    <a href="">
+		<img alt="Stargazers" src="">
     </a>
 </p>
 
