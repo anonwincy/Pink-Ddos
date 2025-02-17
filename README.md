@@ -28,7 +28,7 @@
 &nbsp;
 
 ### Usage
-> <code> python3 Pink-Ddos.py -target <target_ip_or_domain> -port <target_port> -method <mode> -threads <threads> -proxy <proxy_file> -useragents <user_agents_file> -retry <retries> -time <timeout> </code> <br/>
+> <code> python3 Pink-Ddos.py -target <target_ip_or_domain> -port <target_port> -method <mode> -threads <threads> -proxy <proxy_file> -useragents <user_agents_file> -retry <retries> -time <timeout> </code> <br/> <br/>
 > <code> example: python3 Pink-Ddos.py -target example.com -port 80 -method http -threads 20 -useragents random-user.txt </code>
 
 ### How to install
@@ -88,6 +88,10 @@ python3 Pink-Ddos.py -h
 <span>Let's cloning it into your computer.</span>
 ```bash
 > git clone https://github.com/anonwincy/Pink-Ddos.git
+```
+```bash
+cd Pink-Ddos
+python3 Pink-Ddos.py -h
 ```
 </details>
 	
