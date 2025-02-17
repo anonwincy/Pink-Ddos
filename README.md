@@ -84,7 +84,7 @@
 
 <span>Let's cloning it into your computer.</span>
 ```bash
-> https://github.com/anonwincy/Pink-Ddos.git
+> git clone https://github.com/anonwincy/Pink-Ddos.git
 ```
 </details>
 	
