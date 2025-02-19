@@ -137,9 +137,9 @@ def main():
             proxy_list = file.read().splitlines()
 
     if mode == "http":
-    perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry)  # Fix: Passing proxy_list instead of proxy_file
+        perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry)  # Fixed Indentation
 elif mode == "tcp":
-    perform_tcp_flood(target, port, threads, timeout)
+        perform_tcp_flood(target, port, threads, timeout)
 
 
 if __name__ == "__main__":
