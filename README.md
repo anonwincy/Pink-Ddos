@@ -29,7 +29,10 @@
 
 ### Usage
 > <code> python3 Pink-Ddos.py -target <target_ip_or_domain> -port <target_port> -method <mode> -threads <threads> -proxy <proxy_file> -useragents <user_agents_file> -retry <retries> -time <timeout> </code> <br/> <br/>
-> <code> example: python3 Pink-Ddos.py -target example.com -port 80 -method http -threads 20 -useragents random-user.txt </code>
+<h4>For HTTP</h4>
+> <code> example: python3 Pink-Ddos.py -url example.in -port 80 -method http -threads 20 -useragents random-user.txt </code>
+<h4>For TCP</h4>
+> <code> example: python3 Pink-Ddos.py -url example.in -port 80 -method tcp -threads 20 optional (-useragents random-user.txt) </code>
 
 <h3 style="text-align:center;"> Method: TCP & HTTP</h3>
 
