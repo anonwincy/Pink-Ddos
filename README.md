@@ -42,18 +42,18 @@
 	
 <span>Make sure you have already installed `git` if you don't, run the code above.</span>
 ```bash
-> pkg update -y
-> pkg upgrade -y
-> pkg install pip
-> pkg install python
-> pkg install python2
-> pkg install git -y
-> pip install requests
-> pip install tqdm
-> pip install HTTPAdapter
-> pip install signal
-> pip install sys
-> pip install Retry
+ pkg update -y
+ pkg upgrade -y
+ pkg install pip
+ pkg install python
+ pkg install python2
+ pkg install git -y
+ pip install requests
+ pip install tqdm
+ pip install HTTPAdapter
+ pip install signal
+ pip install sys
+ pip install Retry
 
 ```
 
@@ -72,21 +72,21 @@ python3 Pink-Ddos.py -h
 	
 <span>Run as root</span>
 ```bash
-> apt update -y
-> apt install git -y
-> apt update -y
-> apt upgrade -y
-> apt install pip
-> apt install python
-> apt install python2
-> apt install git -y
-> pip install requests
-> pip install tqdm
-> pip install HTTPAdapter
-> pip install signal
-> pip install sys
-> pip install Retry
-> pip install os
+ apt update -y
+ apt install git -y
+ apt update -y
+ apt upgrade -y
+ apt install pip
+ apt install python
+ apt install python2
+ apt install git -y
+ pip install requests
+ pip install tqdm
+ pip install HTTPAdapter
+ pip install signal
+ pip install sys
+ pip install Retry
+ pip install os
 
 ```
 
